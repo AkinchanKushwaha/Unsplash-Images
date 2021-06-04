@@ -1,9 +1,7 @@
 package com.example.unsplashimages.viewModel
 
 
-import android.util.Log
 import android.util.Log.d
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.unsplashimages.model.UnsplashData
