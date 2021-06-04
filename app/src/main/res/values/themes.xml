@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.UnsplashImages" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryAccent</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryVarient</item>
         <item name="colorOnPrimary">@color/colorPrimaryAccent</item>
         <!-- Secondary brand color. -->

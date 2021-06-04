@@ -4,17 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     android:padding="@dimen/item_image_layout_padding">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_image_divider_height"
-        android:layout_marginBottom="@dimen/item_image_divider_margin_bottom"
-        android:background="@color/colorPrimaryAccent"/>
-
     <ImageView
+        android:id="@+id/iv_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/item_image_layout_height"
         android:src="@drawable/ic_launcher_foreground"
         android:contentDescription="@string/image" />
     <LinearLayout
@@ -57,6 +53,11 @@
         android:layout_marginTop="@dimen/item_image_tv_download_margin_top"
         android:textSize="@dimen/item_image_tv_download_text_size"
         android:fontFamily="@font/roboto_bold"
-        android:background="@drawable/btn_download"
-        />
+        android:background="@drawable/btn_download" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_image_divider_height"
+        android:layout_marginTop="@dimen/item_image_divider_margin_top"
+        android:background="@color/colorPrimaryAccent" />
 </LinearLayout>
