@@ -33,7 +33,7 @@ android {
     }
 }
 
-def lifeCycleExtensionsVersion = '1.1.1'
+
 def retrofitVersion = '2.9.0'
 def daggerVersion = '2.28.3'
 def glide = '4.12.0'
@@ -57,18 +57,16 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
 
-    // Dagger
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-android-process:$daggerVersion"
+//    // Dagger
+//    implementation "com.google.dagger:dagger:$daggerVersion"
+//    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+//    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+//    annotationProcessor "com.google.dagger:dagger-android-process:$daggerVersion"
 
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide"
 
-    // Life cycle extensions
-    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionsVersion"
 
 
     testImplementation 'junit:junit:4.13.2'
