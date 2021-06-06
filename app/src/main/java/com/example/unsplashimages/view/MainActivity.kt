@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
             adapter = imagesListAdapter
         }
 
+        swipeRefreshLayoutMain.setOnRefreshListener {
+            swipeRefreshLayoutMain.isRefreshing = false
+            viewModel.refresh()
+        }
         observeViewModel()
 
     }
@@ -42,8 +46,14 @@ class MainActivity : AppCompatActivity() {
                 tv_error.visibility = if (it) View.VISIBLE else View.GONE
                 if (it) {
                     recyclerViewImages.visibility = View.GONE
-
                 }
+            }
+        })
+
+        viewModel.loading.observe(this, { isLoading ->
+            isLoading?.let {
+                progress_bar_loading.visibility = if (it) View.VISIBLE else View.GONE
+                recyclerViewImages.visibility = if (it) View.GONE else View.VISIBLE
             }
         })
     }
