@@ -1,6 +1,7 @@
 package com.example.unsplashimages.di
 
 import com.example.unsplashimages.model.UnsplashApi
+import com.example.unsplashimages.model.UnsplashService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -19,5 +20,10 @@ class ApiModule {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
             .create(UnsplashApi::class.java)
+    }
+
+    @Provides
+    fun provideUnsplashService(): UnsplashService {
+        return UnsplashService()
     }
 }
