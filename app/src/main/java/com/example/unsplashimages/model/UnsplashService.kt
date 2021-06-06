@@ -1,19 +1,17 @@
 package com.example.unsplashimages.model
 
+import com.example.unsplashimages.di.DaggerApiComponent
 import io.reactivex.Single
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
 class UnsplashService {
-    private val BASE_URL = "https://picsum.photos/v2/"
 
-    private val api: UnsplashApi = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .build()
-        .create(UnsplashApi::class.java)
+    @Inject
+    lateinit var api: UnsplashApi
+
+    init {
+        DaggerApiComponent.create().inject(this)
+    }
 
     fun getImages(): Single<UnsplashData> {
         return api.getImages()
